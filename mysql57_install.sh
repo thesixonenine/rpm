@@ -6,9 +6,14 @@ yum install -y libaio
 yum install -y numactl
 yum install -y perl
 cd /usr/local
-wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-common-5.7.24-1.el7.x86_64.rpm
-wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-libs-5.7.24-1.el7.x86_64.rpm
-wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-client-5.7.24-1.el7.x86_64.rpm
+# wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-common-5.7.24-1.el7.x86_64.rpm
+# wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-libs-5.7.24-1.el7.x86_64.rpm
+# wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-client-5.7.24-1.el7.x86_64.rpm
+
+wget https://github.com/thesixonenine/rpm/raw/master/mysql-community-common-5.7.24-1.el7.x86_64.rpm
+wget https://github.com/thesixonenine/rpm/raw/master/mysql-community-libs-5.7.24-1.el7.x86_64.rpm
+wget https://github.com/thesixonenine/rpm/raw/master/mysql-community-client-5.7.24-1.el7.x86_64.rpm
+
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-server-5.7.24-1.el7.x86_64.rpm
 
 yum remove -y mariadb-*
