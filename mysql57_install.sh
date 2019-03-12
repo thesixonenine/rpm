@@ -33,4 +33,6 @@ echo "修改root密码的SQL:"
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';"
 echo "修改root权限的SQL:"
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456';"
+echo "刷新权限的SQL:"
+echo "FLUSH PRIVILEGES;"
 mysql -uroot -p
