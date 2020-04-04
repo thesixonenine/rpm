@@ -24,8 +24,10 @@ rpm -ivh mysql-community-client-5.7.24-1.el7.x86_64.rpm
 rpm -ivh mysql-community-server-5.7.24-1.el7.x86_64.rpm
 
 mysqld --initialize --user=mysql
+chown mysql:mysql /var/lib/mysql -R
 mysql_ssl_rsa_setup
 systemctl start mysqld
+systemctl enable mysqld
 # mysqld_safe --user=mysql &
 echo "下面试MySQL的临时密码, 请在登录MySQL登录后使用如下语句修改MySQL的密码"
 grep 'temporary password' /var/log/mysqld.log
